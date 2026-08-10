@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>David Bransky — Bransky Law Group · Paralegal SOP</title>
+<meta name="author" content="Rogers Hollow">
+<meta name="description" content="Standard Operating Procedure prepared by Rogers Hollow for David Bransky, Bransky Law Group.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1f3a5f; --navy-deep:#16304e; --blue:#2e5e8c; --blue-tint:#eef3f8;
+    --ink:#1f2a37; --muted:#5c6b7a; --line:#dbe4ee; --line-soft:#e8eef5;
+    --bg:#f5f8fb; --card:#ffffff;
+    --rule-fg:#256045; --rule-bg:#ecf6ef; --rule-bd:#bfe3cc;
+    --stop-fg:#a52218; --stop-bg:#fbeceb; --stop-bd:#f0c3bf;
+    --conf-fg:#8a5d20; --conf-bg:#fdf4e8; --conf-bd:#ecd4ad;
+    --always-fg:#1f3a5f; --always-bg:#eef3f8; --always-bd:#cad9e8;
+    --radius:14px; --radius-sm:9px;
+    --shadow:0 1px 2px rgba(24,45,72,.04), 0 8px 24px rgba(24,45,72,.06);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    font-size:16px; line-height:1.62; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--blue); text-decoration:none}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 22px}
+
+  /* ---------- header ---------- */
+  header.masthead{
+    background:linear-gradient(180deg,#fbfcfe 0%, var(--bg) 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .masthead .wrap{padding-top:46px; padding-bottom:34px}
+  .eyebrow{
+    display:inline-block; font-size:12px; font-weight:700; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--blue); background:var(--blue-tint);
+    border:1px solid var(--always-bd); padding:5px 12px; border-radius:999px;
+  }
+  h1{
+    font-family:"Spectral",Georgia,serif; font-weight:700; color:var(--navy);
+    font-size:clamp(30px,5vw,46px); line-height:1.08; margin:16px 0 10px; letter-spacing:-.01em;
+  }
+  .lede{font-size:clamp(16px,2.2vw,18.5px); color:var(--muted); max-width:70ch; margin:0}
+  .meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px}
+  .chip{
+    display:flex; flex-direction:column; gap:2px; background:var(--card);
+    border:1px solid var(--line); border-radius:var(--radius-sm); padding:9px 14px; min-width:150px;
+    box-shadow:var(--shadow);
+  }
+  .chip .k{font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+  .chip .v{font-size:14.5px; font-weight:600; color:var(--ink)}
+
+  /* ---------- layout ---------- */
+  .layout{display:grid; grid-template-columns:1fr; gap:0}
+  @media(min-width:940px){
+    .layout{grid-template-columns:250px minmax(0,1fr); gap:40px; align-items:start}
+    nav.toc{position:sticky; top:22px}
+  }
+  main{padding:34px 0 10px}
+
+  /* ---------- toc ---------- */
+  nav.toc{padding-top:34px}
+  nav.toc .toc-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:16px 16px 10px; box-shadow:var(--shadow)}
+  nav.toc h2{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:2px 4px 12px; font-weight:700}
+  nav.toc ol{list-style:none; margin:0; padding:0; counter-reset:toc}
+  nav.toc li{counter-increment:toc}
+  nav.toc a{
+    display:grid; grid-template-columns:22px 1fr; gap:8px; align-items:baseline;
+    padding:6px 6px; border-radius:8px; color:var(--ink); font-size:14px; font-weight:500;
+  }
+  nav.toc a::before{content:counter(toc); color:var(--blue); font-weight:700; font-variant-numeric:tabular-nums; font-size:12.5px}
+  nav.toc a:hover{background:var(--blue-tint)}
+  nav.toc a.active{background:var(--blue-tint); color:var(--navy); font-weight:600}
+
+  /* ---------- sections ---------- */
+  section{scroll-margin-top:20px; padding:30px 0; border-top:1px solid var(--line-soft)}
+  section:first-of-type{border-top:none; padding-top:6px}
+  .sec-head{display:flex; align-items:center; gap:14px; margin:0 0 14px}
+  .num{
+    flex:none; width:34px; height:34px; border-radius:9px; background:var(--navy); color:#fff;
+    font-weight:700; font-size:16px; display:grid; place-items:center;
+    font-family:"Spectral",serif; box-shadow:0 2px 6px rgba(31,58,95,.28);
+  }
+  h2.sec-title{font-family:"Spectral",serif; color:var(--navy); font-weight:600; font-size:24px; margin:0; letter-spacing:-.01em}
+  h3{font-size:16px; font-weight:700; color:var(--navy-deep); margin:22px 0 6px}
+  p{margin:0 0 12px}
+  .muted{color:var(--muted)}
+  strong{color:var(--ink); font-weight:700}
+  code.inline{background:var(--blue-tint); border:1px solid var(--always-bd); border-radius:6px; padding:1px 7px; font-size:13.5px; font-weight:600; color:var(--navy); font-family:"Inter",monospace}
+
+  ul.clean{margin:6px 0 12px; padding:0; list-style:none}
+  ul.clean li{position:relative; padding:3px 0 3px 20px}
+  ul.clean li::before{content:""; position:absolute; left:3px; top:12px; width:6px; height:6px; border-radius:50%; background:var(--blue)}
+  ul.sub{margin:2px 0 8px; padding-left:20px}
+  ul.sub li{position:relative; padding:2px 0 2px 18px; list-style:none}
+  ul.sub li::before{content:"–"; position:absolute; left:2px; color:var(--muted)}
+
+  ol.steps{margin:6px 0 12px; padding:0; list-style:none; counter-reset:st}
+  ol.steps li{counter-increment:st; position:relative; padding:5px 0 5px 34px}
+  ol.steps li::before{content:counter(st); position:absolute; left:0; top:5px; width:22px; height:22px; border-radius:6px;
+    background:var(--blue-tint); color:var(--blue); font-weight:700; font-size:12.5px; display:grid; place-items:center; border:1px solid var(--always-bd)}
+
+  /* ---------- tables ---------- */
+  .tablewrap{overflow-x:auto; margin:10px 0 6px; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow)}
+  table{border-collapse:collapse; width:100%; background:var(--card); font-size:14.5px}
+  thead th{background:var(--navy); color:#fff; text-align:left; font-weight:600; padding:11px 14px; font-size:13.5px; letter-spacing:.01em}
+  tbody td{padding:10px 14px; border-top:1px solid var(--line-soft); vertical-align:top}
+  tbody tr:nth-child(even) td{background:#fafcfe}
+  td.form{font-weight:700; color:var(--navy); white-space:nowrap; font-variant-numeric:tabular-nums}
+
+  /* two-column compare */
+  .compare thead th:first-child{background:#2b6a4a}
+  .compare thead th:last-child{background:var(--navy)}
+
+  /* ---------- callouts ---------- */
+  .call{border:1px solid; border-left-width:5px; border-radius:var(--radius-sm); padding:12px 16px; margin:14px 0; font-size:14.5px}
+  .call .tag{display:inline-block; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:2px 8px; border-radius:5px; margin-right:8px; vertical-align:1px}
+  .call p{margin:0}
+  .call.rule{background:var(--rule-bg); border-color:var(--rule-bd)}
+  .call.rule .tag{background:var(--rule-fg); color:#fff}
+  .call.stop{background:var(--stop-bg); border-color:var(--stop-bd)}
+  .call.stop .tag{background:var(--stop-fg); color:#fff}
+  .call.confirm{background:var(--conf-bg); border-color:var(--conf-bd)}
+  .call.confirm .tag{background:var(--conf-fg); color:#fff}
+  .call.always{background:var(--always-bg); border-color:var(--always-bd)}
+  .call.always .tag{background:var(--always-fg); color:#fff}
+
+  /* role cards */
+  .roles{display:grid; gap:10px; margin:10px 0}
+  @media(min-width:720px){.roles{grid-template-columns:repeat(3,1fr)}}
+  .role{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; box-shadow:var(--shadow)}
+  .role h4{margin:0 0 6px; font-size:14.5px; color:var(--navy); font-weight:700}
+  .role p{margin:0; font-size:14px; color:var(--muted)}
+  .role .who{display:inline-block; margin-top:8px; font-size:12px; font-weight:700; padding:3px 9px; border-radius:999px; background:var(--blue-tint); color:var(--navy)}
+
+  /* file-name block */
+  .codeblock{background:var(--navy-deep); color:#eaf1f8; border-radius:var(--radius-sm); padding:14px 16px; font-family:"Inter",monospace; font-size:14px; overflow-x:auto; margin:8px 0}
+  .codeblock .ex{display:block; color:#9fc0dd; margin-top:8px; font-size:13px}
+
+  /* checklist */
+  .checklist{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:8px 6px; box-shadow:var(--shadow); margin:10px 0}
+  .checklist label{display:flex; gap:12px; align-items:flex-start; padding:9px 14px; border-radius:8px; cursor:pointer; font-size:14.5px}
+  .checklist label:hover{background:var(--blue-tint)}
+  .checklist input{appearance:none; -webkit-appearance:none; flex:none; width:20px; height:20px; margin-top:1px; border:2px solid var(--line); border-radius:6px; background:#fff; cursor:pointer; position:relative; transition:.15s}
+  .checklist input:checked{background:var(--rule-fg); border-color:var(--rule-fg)}
+  .checklist input:checked::after{content:"✓"; position:absolute; inset:0; color:#fff; font-size:13px; font-weight:800; display:grid; place-items:center}
+  .checklist input:focus-visible{outline:3px solid var(--blue-tint); outline-offset:2px}
+  .checklist input:checked + span{color:var(--muted); text-decoration:line-through; text-decoration-color:var(--line)}
+
+  /* footer */
+  footer{border-top:1px solid var(--line); margin-top:20px; padding:26px 0 60px; color:var(--muted); font-size:13.5px}
+  footer .wrap{display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; justify-content:space-between}
+  footer .v{font-weight:700; color:var(--navy)}
+
+  :focus-visible{outline:3px solid #bcd3e8; outline-offset:2px; border-radius:4px}
+
+  /* back to top */
+  #toTop{
+    position:fixed; right:22px; bottom:22px; width:46px; height:46px; border-radius:50%;
+    background:var(--navy); color:#fff; border:none; cursor:pointer;
+    display:grid; place-items:center; box-shadow:0 6px 18px rgba(24,45,72,.28);
+    opacity:0; transform:translateY(12px); pointer-events:none; z-index:60;
+    transition:opacity .25s ease, transform .25s ease, background .2s ease;
+  }
+  #toTop.show{opacity:1; transform:translateY(0); pointer-events:auto}
+  #toTop:hover{background:var(--navy-deep); transform:translateY(-3px)}
+  #toTop:focus-visible{outline:3px solid #bcd3e8; outline-offset:3px}
+  @media print{#toTop{display:none}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition:none!important}}
+  @media print{
+    nav.toc,.eyebrow{display:none}
+    body{background:#fff} .layout{grid-template-columns:1fr}
+    .call,.chip,.role,.tablewrap,.checklist{box-shadow:none}
+    section{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <span class="eyebrow">Standard Operating Procedure</span>
+    <h1>David Bransky — Bransky Law Group</h1>
+    <p class="lede">How we draft, organize, and file the core documents in a California dissolution — from opening a case through the judgment package. Los Angeles County workflow.</p>
+    <div class="meta">
+      <div class="chip"><span class="k">Prepared by</span><span class="v">Rogers Hollow</span></div>
+      <div class="chip"><span class="k">Attorney</span><span class="v">David Bransky, Esq.</span></div>
+      <div class="chip"><span class="k">CA State Bar</span><span class="v">#289778</span></div>
+      <div class="chip"><span class="k">Default court</span><span class="v">Stanley Mosk (LA)</span></div>
+      <div class="chip"><span class="k">Status</span><span class="v">Draft v1.0</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap layout">
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="On this page">
+    <div class="toc-card">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#purpose">Purpose</a></li>
+        <li><a href="#reference">Firm &amp; system reference</a></li>
+        <li><a href="#role">Attorney's role first</a></li>
+        <li><a href="#open">Opening a case</a></li>
+        <li><a href="#response">Filing a response</a></li>
+        <li><a href="#pdd">Declaration of disclosure</a></li>
+        <li><a href="#corroborating">Corroborating documents</a></li>
+        <li><a href="#judgment">Judgment package</a></li>
+        <li><a href="#efile">E-filing (Green Filing)</a></li>
+        <li><a href="#comms">Client communication</a></li>
+        <li><a href="#standards">Firm-wide standards</a></li>
+        <li><a href="#checklist">Before-filing checklist</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main>
+
+    <section id="purpose">
+      <div class="sec-head"><span class="num">1</span><h2 class="sec-title">Purpose</h2></div>
+      <p>This SOP standardizes how the paralegal drafts, organizes, and files the core documents in a Bransky Law family law matter. Sections 2–3 apply to every task; Sections 4–10 are the individual workflows; Section 11 lists firm-wide standards; Section 12 is a pre-filing checklist.</p>
+      <p class="muted">Throughout, we speak in Judicial Council form numbers (e.g. <code class="inline">FL-100</code>, <code class="inline">FL-150</code>, <code class="inline">FL-142</code>). Where a document is named, its form number is given alongside.</p>
+    </section>
+
+    <section id="reference">
+      <div class="sec-head"><span class="num">2</span><h2 class="sec-title">Firm &amp; System Reference</h2></div>
+      <div class="tablewrap">
+        <table>
+          <tbody>
+            <tr><td class="form">Attorney</td><td>David Bransky, Esq. · CA State Bar #289778 · dbransky@bransky-law.com</td></tr>
+            <tr><td class="form">Default court</td><td>LA Superior Court — Stanley Mosk Courthouse (downtown). ~95% of matters.</td></tr>
+            <tr><td class="form">Drafting</td><td>Westlaw Form Builder — search by form # or name, select client, <strong>Build → Download</strong>.</td></tr>
+            <tr><td class="form">Editing</td><td>Adobe Acrobat — used heavily after drafting (text, notes, asterisks, highlights, totals).</td></tr>
+            <tr><td class="form">E-filing</td><td>Green Filing (EFSP).</td></tr>
+            <tr><td class="form">Files</td><td>OneDrive — one folder per client: <strong>Pleadings / Correspondence / Disclosures</strong>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="call always"><span class="tag">Note</span><p>Logins for Form Builder, Green Filing, and email exist and were shown in the training videos. For security, credentials are <strong>kept out of this SOP</strong> — store them in the firm password manager.</p></div>
+    </section>
+
+    <section id="role">
+      <div class="sec-head"><span class="num">3</span><h2 class="sec-title">Determine the Attorney's Role First</h2></div>
+      <p>Whose information appears on every pleading depends entirely on David's role in the matter. Settle this before drafting anything.</p>
+      <div class="roles">
+        <div class="role"><h4>Attorney of record</h4><p>David is counsel of record for the client.</p><span class="who">Use DAVID's info</span></div>
+        <div class="role"><h4>Consulting attorney</h4><p>David advises only; not named on the pleading.</p><span class="who">Use CLIENT's info</span></div>
+        <div class="role"><h4>Mediator</h4><p>David mediates for both parties.</p><span class="who">CLIENT's info + "Mediated by David Bransky, Esq."</span></div>
+      </div>
+      <div class="call always"><span class="tag">Always</span><p>Disclosures are prepared as <strong>two full sets</strong> — one per party (Petitioner and Respondent, or two Petitioners under a Joint Petition).</p></div>
+    </section>
+
+    <section id="open">
+      <div class="sec-head"><span class="num">4</span><h2 class="sec-title">Opening a Case (Initial Filing)</h2></div>
+      <p>Every LA County case-opening filing requires three documents:</p>
+      <ol class="steps">
+        <li><strong>Petition</strong> — <code class="inline">FL-100</code> (or Joint Petition, <code class="inline">FL-700</code>)</li>
+        <li><strong>Summons</strong> — <code class="inline">FL-110</code> (or Joint Summons, <code class="inline">FL-710</code>)</li>
+        <li><strong>Family Law Case Cover Sheet</strong> — <code class="inline">FAM-020</code> (LA County form)</li>
+      </ol>
+      <ul class="clean">
+        <li>If there are minor children, also file <code class="inline">FL-105</code> (UCCJEA declaration).</li>
+      </ul>
+      <div class="call always"><span class="tag">2026 change</span><p>Under the new <strong>Joint Petition</strong> (<code class="inline">FL-700</code>) and <strong>Joint Summons</strong> (<code class="inline">FL-710</code>), both parties are <strong>Petitioners</strong> — there is no Respondent. These replace <code class="inline">FL-100</code> / <code class="inline">FL-110</code>. Either party may be Petitioner 1 or 2, but the <strong>same person must be Petitioner 1 (or 2) on every document</strong> in the case.</p></div>
+    </section>
+
+    <section id="response">
+      <div class="sec-head"><span class="num">5</span><h2 class="sec-title">Filing a Response</h2></div>
+      <ul class="clean">
+        <li>Response only: <code class="inline">FL-120</code>.</li>
+        <li>Response with minor children: <code class="inline">FL-120</code> + <code class="inline">FL-105</code> (UCCJEA).</li>
+        <li>A respondent filing needs only the response (and UCCJEA if children) — <strong>no petition, summons, or cover sheet</strong>.</li>
+      </ul>
+    </section>
+
+    <section id="pdd">
+      <div class="sec-head"><span class="num">6</span><h2 class="sec-title">Preliminary Declaration of Disclosure (PDD)</h2></div>
+      <div class="call rule"><span class="tag">Rule</span><p>Mandatory in California — <strong>no exceptions</strong>, regardless of asset level. Prepare one full set per party.</p></div>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th style="width:120px">Form</th><th>Document</th></tr></thead>
+          <tbody>
+            <tr><td class="form">FL-142</td><td>Schedule of Assets and Debts</td></tr>
+            <tr><td class="form">FL-150</td><td>Income and Expense Declaration</td></tr>
+            <tr><td class="form">FL-140</td><td>Declaration of Disclosure — 2-page form; the builder outputs 1 page, so always add page 2. Use real names.</td></tr>
+            <tr><td class="form">FL-141</td><td>Declaration Regarding Service of Declaration of Disclosure — the <strong>only PDD form filed with the court</strong>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted"><strong>Workflow:</strong> draft in Form Builder → refine in Adobe → highlight everything for David's review. The paralegal is the first person to review the client's entries; never assume David already knows the context.</p>
+
+      <h3>FL-142 — Schedule of Assets and Debts (4-page form)</h3>
+      <ul class="clean">
+        <li>The checking-accounts field is very small; if entries overflow, use an <strong>attachment form</strong>.</li>
+        <li>Common client errors to catch: <strong>IRAs entered in the 401(k)/pension section</strong> (that section is 401(k)s and pensions only); brokerage/stock accounts placed under "other assets."</li>
+      </ul>
+
+      <h3>FL-150 — Income and Expense Declaration</h3>
+      <ul class="clean">
+        <li>Page 1: statistical (age, tax-filing status). Page 2: income — W-2 wages, corporate reasonable compensation, investment income, or self-employment net of a P&amp;L. Page 3: expenses. Page 4: only if minor children (parenting time).</li>
+        <li>Page 3 expenses — <strong>always check "estimated expenses."</strong> Clients routinely omit clothing, entertainment, gifts, and vacation; flag those.</li>
+        <li>Use asterisks "See Schedule of Assets and Debts" where applicable (added in Adobe).</li>
+      </ul>
+      <div class="call stop"><span class="tag">Stop</span><p>Totals do <strong>not</strong> auto-calculate in Adobe. After any edit, manually re-add and verify every total before the form leaves your hands.</p></div>
+
+      <h3>FL-141 — Declaration Regarding Service</h3>
+      <ul class="clean">
+        <li>Boxes (99% of matters): <strong>"other party or other party's attorney" + "via email."</strong> Mail is rare.</li>
+        <li>Signed by David (attorney of record) or by the client (consulting).</li>
+      </ul>
+
+      <h3>Statements labeling</h3>
+      <ul class="clean">
+        <li>Label each statement <strong>"As of [date]."</strong> Record each account by name and last 4 digits (Acct ####).</li>
+      </ul>
+    </section>
+
+    <section id="corroborating">
+      <div class="sec-head"><span class="num">7</span><h2 class="sec-title">Corroborating Documents</h2></div>
+      <ul class="clean">
+        <li>Attach beneath <code class="inline">FL-150</code> in Adobe: <strong>pay stubs</strong> (wage earners) or <strong>profit &amp; loss</strong> (self-employed). Nothing attached if the party is not working (homemaker/retired).</li>
+        <li>Organize <code class="inline">FL-142</code> support one of two ways (whichever David prefers):
+          <ul class="sub">
+            <li>Blue interstitial divider pages behind FL-142, labeled by category (e.g. Section 1 Real Estate), with deeds/statements filed behind each; or</li>
+            <li>A separate OneDrive subfolder "[Last] [First] PDD Corroborating Documents," with each file renamed to its FL-142 category number.</li>
+          </ul>
+        </li>
+        <li>Reconcile every figure against the statements (e.g. form says $25,000, statement says $15,000 → highlight).</li>
+      </ul>
+      <div class="call rule"><span class="tag">Rule</span><p><strong>Detail, detail, detail.</strong> Clients make mistakes constantly — the highlight function is your best friend for surfacing them.</p></div>
+    </section>
+
+    <section id="judgment">
+      <div class="sec-head"><span class="num">8</span><h2 class="sec-title">Judgment Package</h2></div>
+      <p>The set of pleadings that settles the case — the judgment memorializes the full agreement (property division, support, custody, name change, etc.). The same form set is used for all three role types; only the name/info block changes.</p>
+
+      <h3>Always</h3>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th style="width:120px">Form</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td class="form">FL-180</td><td>Judgment (sits on top of the stipulated judgment). If minor children, attach <code class="inline">FL-192</code> behind it — nothing to complete on FL-192.</td></tr>
+            <tr><td class="form">FL-190</td><td>Notice of Entry of Judgment — no signatures; addresses on file with the court.</td></tr>
+            <tr><td class="form">FL-130</td><td>Appearance, Stipulation and Waivers.</td></tr>
+            <tr><td class="form">FL-170</td><td>Declaration for Uncontested Dissolution — complete sections 6 &amp; 7 if there are children.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Usually</h3>
+      <ul class="clean"><li><code class="inline">FL-144</code> — Stipulation and Waiver of Final Declaration of Disclosure (when disclosure is waived).</li></ul>
+
+      <h3>Sometimes — only on David's instruction</h3>
+      <ul class="clean"><li><code class="inline">FL-195</code> · <code class="inline">FL-435</code> · <code class="inline">FL-455</code> · <code class="inline">FL-191</code>. Add only when David tells you to.</li></ul>
+
+      <div class="call rule"><span class="tag">Rule</span><p>On <code class="inline">FL-180</code>, check the two service boxes — proof of service of summons <em>or</em> notice and acknowledgment of receipt. If a Response (<code class="inline">FL-120</code>) was filed (an appearance), check the appearance box. When more than one date applies, <strong>always use the earlier service date.</strong></p></div>
+      <div class="call confirm"><span class="tag">Per matter</span><p>A parentage case (unmarried parents with a child) uses a <strong>different box on FL-130</strong>. Confirm with David per case: name change, spousal support (reserve vs. terminate), attorney's fees, and who signs.</p></div>
+    </section>
+
+    <section id="efile">
+      <div class="sec-head"><span class="num">9</span><h2 class="sec-title">E-Filing (Green Filing)</h2></div>
+      <ol class="steps">
+        <li>Confirm the role and select the correct existing case (it should populate).</li>
+        <li>Upload the pleading from the client's OneDrive <strong>Pleadings</strong> subfolder.</li>
+        <li>Set document security to <strong>"FL General Family Law"</strong> (LA requirement).</li>
+        <li>Service contact: David (add the paralegal only if authorized).</li>
+        <li>Pay with the <strong>business credit card</strong>; verify, then report the exact cost to David for client billing.</li>
+        <li>Submit — David's email receives the filing confirmation.</li>
+      </ol>
+      <p class="muted">Response/appearance fee ≈ $465–$467; verify the current amount before filing.</p>
+    </section>
+
+    <section id="comms">
+      <div class="sec-head"><span class="num">10</span><h2 class="sec-title">Client Communication &amp; File Sharing</h2></div>
+      <ul class="clean">
+        <li>Email subject convention: <strong>"[Last Name]: [short description]"</strong> so everything is searchable.</li>
+        <li>Disclosure request email: send the blank <code class="inline">FL-150</code> and blank <code class="inline">FL-142</code> (with the firm's standard notes).</li>
+        <li>Create a disclosure subfolder "[Last].[First] Disclosure Docs" and share the OneDrive link in the email.</li>
+        <li>Using a <strong>Share link</strong> (no upload alerts): add "Please let us know when you upload documents." Using <strong>Request Files</strong> (auto-alerts; clients can't see each other's uploads): that sentence isn't needed.</li>
+      </ul>
+    </section>
+
+    <section id="standards">
+      <div class="sec-head"><span class="num">11</span><h2 class="sec-title">Firm-Wide Standards</h2></div>
+      <ul class="clean">
+        <li><strong>Highlight is your best friend</strong> — mark every fill-in, mistake, oddity, and reconciliation gap so David can review at a glance.</li>
+        <li>Never assume David has the context; the paralegal is the first reviewer of the client's work.</li>
+        <li>Manually verify all math after any Adobe edit.</li>
+        <li>Use clients' real full names — never placeholders.</li>
+        <li>Reference guides/templates: the Talerty file and prior mediation files in the drive.</li>
+      </ul>
+    </section>
+
+    <section id="checklist">
+      <div class="sec-head"><span class="num">12</span><h2 class="sec-title">Before-Filing / Sending Checklist</h2></div>
+      <p class="muted">Run through this before anything goes to David or the court. Click to check off — for your own tracking on this page; nothing is saved.</p>
+      <div class="checklist">
+        <label><input type="checkbox"><span>Attorney role confirmed (record / consulting / mediator) and correct info block used</span></label>
+        <label><input type="checkbox"><span>Correct form set for the task (opening / response / disclosure / judgment)</span></label>
+        <label><input type="checkbox"><span>Case number and court (Stanley Mosk) correct</span></label>
+        <label><input type="checkbox"><span>Minor-children forms added where required (FL-105 / FL-192)</span></label>
+        <label><input type="checkbox"><span>FL-150 "estimated expenses" checked; all totals re-added in Adobe</span></label>
+        <label><input type="checkbox"><span>Figures reconciled against statements; discrepancies highlighted</span></label>
+        <label><input type="checkbox"><span>Corroborating documents attached/organized</span></label>
+        <label><input type="checkbox"><span>Signatures and dates correct; earlier service date used on FL-180</span></label>
+        <label><input type="checkbox"><span>Files saved to the correct OneDrive subfolder and named per convention</span></label>
+        <label><input type="checkbox"><span>Filing cost reported to David for client billing</span></label>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>Prepared by <strong style="color:var(--navy)">Rogers Hollow</strong> · for Bransky Law · California Family Law — Paralegal Workflow</span>
+    <span class="v">v1.0</span>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Back to top" title="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+  // TOC active-state on scroll
+  const links = [...document.querySelectorAll('nav.toc a')];
+  const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const a = map.get(e.target.id);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -70% 0px', threshold: 0 });
+  document.querySelectorAll('main section').forEach(s => obs.observe(s));
+
+  // Back-to-top button
+  const toTop = document.getElementById('toTop');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.addEventListener('scroll', () => {
+    toTop.classList.toggle('show', window.scrollY > 420);
+  }, { passive: true });
+  toTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+</script>
+</body>
+</html>
