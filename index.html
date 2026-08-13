@@ -93,6 +93,11 @@
   .muted{color:var(--muted)}
   strong{color:var(--ink); font-weight:700}
   code.inline{background:var(--blue-tint); border:1px solid var(--always-bd); border-radius:6px; padding:1px 7px; font-size:13.5px; font-weight:600; color:var(--navy); font-family:"Inter",monospace}
+  a.formlink{text-decoration:none; border-radius:6px; display:inline-block}
+  a.formlink:hover code.inline{background:#dbe7f3; border-color:#9fbdd8; color:var(--navy-deep)}
+  td.form a.formlink{color:var(--navy); text-decoration:none; border-bottom:1px solid #b9cde0}
+  td.form a.formlink:hover{border-bottom-color:var(--blue); color:var(--navy-deep)}
+  a.formlink:focus-visible{outline:3px solid #bcd3e8; outline-offset:2px}
 
   ul.clean{margin:6px 0 12px; padding:0; list-style:none}
   ul.clean li{position:relative; padding:3px 0 3px 20px}
@@ -213,6 +218,7 @@
         <li><a href="#pdd">Declaration of disclosure</a></li>
         <li><a href="#corroborating">Corroborating documents</a></li>
         <li><a href="#judgment">Judgment package</a></li>
+        <li><a href="#support">Spousal / partner support</a></li>
         <li><a href="#efile">E-filing (Green Filing)</a></li>
         <li><a href="#comms">Client communication</a></li>
         <li><a href="#standards">Firm-wide standards</a></li>
@@ -226,8 +232,8 @@
 
     <section id="purpose">
       <div class="sec-head"><span class="num">1</span><h2 class="sec-title">Purpose</h2></div>
-      <p>This SOP standardizes how the paralegal drafts, organizes, and files the core documents in a Bransky Law family law matter. Sections 2–3 apply to every task; Sections 4–10 are the individual workflows; Section 11 lists firm-wide standards; Section 12 is a pre-filing checklist.</p>
-      <p class="muted">Throughout, we speak in Judicial Council form numbers (e.g. <code class="inline">FL-100</code>, <code class="inline">FL-150</code>, <code class="inline">FL-142</code>). Where a document is named, its form number is given alongside.</p>
+      <p>This SOP standardizes how the paralegal drafts, organizes, and files the core documents in a Bransky Law family law matter. Sections 2–3 apply to every task; Sections 4–11 are the individual workflows; Section 12 lists firm-wide standards; Section 13 is a pre-filing checklist.</p>
+      <p class="muted">Throughout, we speak in Judicial Council form numbers (e.g. <code class="inline">FL-100</code>, <a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl150.pdf" target="_blank" rel="noopener"><code class="inline">FL-150</code></a>, <a class="formlink" href="https://courts.ca.gov/system/files?file=2025-07/fl142.pdf" target="_blank" rel="noopener"><code class="inline">FL-142</code></a>). Where a document is named, its form number is given alongside.</p>
     </section>
 
     <section id="reference">
@@ -256,6 +262,7 @@
         <div class="role"><h4>Mediator</h4><p>David mediates for both parties.</p><span class="who">CLIENT's info + "Mediated by David Bransky, Esq."</span></div>
       </div>
       <div class="call always"><span class="tag">Always</span><p>Disclosures are prepared as <strong>two full sets</strong> — one per party (Petitioner and Respondent, or two Petitioners under a Joint Petition).</p></div>
+      <div class="call stop"><span class="tag">Careful</span><p><strong>No attorney means one signature.</strong> When David is consulting or mediating (not the attorney of record), the party signs only in the party signature block. If Form Builder also copies the client's signature into the <em>attorney</em> signature line, delete that duplicate — the respondent/client signs once, not twice.</p></div>
     </section>
 
     <section id="open">
@@ -288,10 +295,10 @@
         <table>
           <thead><tr><th style="width:120px">Form</th><th>Document</th></tr></thead>
           <tbody>
-            <tr><td class="form">FL-142</td><td>Schedule of Assets and Debts</td></tr>
-            <tr><td class="form">FL-150</td><td>Income and Expense Declaration</td></tr>
-            <tr><td class="form">FL-140</td><td>Declaration of Disclosure — 2-page form; the builder outputs 1 page, so always add page 2. Use real names.</td></tr>
-            <tr><td class="form">FL-141</td><td>Declaration Regarding Service of Declaration of Disclosure — the <strong>only PDD form filed with the court</strong>.</td></tr>
+            <tr><td class="form"><a class="formlink" href="https://courts.ca.gov/system/files?file=2025-07/fl142.pdf" target="_blank" rel="noopener">FL-142</a></td><td>Schedule of Assets and Debts</td></tr>
+            <tr><td class="form"><a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl150.pdf" target="_blank" rel="noopener">FL-150</a></td><td>Income and Expense Declaration</td></tr>
+            <tr><td class="form"><a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl140.pdf" target="_blank" rel="noopener">FL-140</a></td><td>Declaration of Disclosure — 2-page form; the builder outputs 1 page, so always add page 2. Use real names.</td></tr>
+            <tr><td class="form"><a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl141.pdf" target="_blank" rel="noopener">FL-141</a></td><td>Declaration Regarding Service of Declaration of Disclosure — the <strong>only PDD form filed with the court</strong>.</td></tr>
           </tbody>
         </table>
       </div>
@@ -326,8 +333,8 @@
     <section id="corroborating">
       <div class="sec-head"><span class="num">7</span><h2 class="sec-title">Corroborating Documents</h2></div>
       <ul class="clean">
-        <li>Attach beneath <code class="inline">FL-150</code> in Adobe: <strong>pay stubs</strong> (wage earners) or <strong>profit &amp; loss</strong> (self-employed). Nothing attached if the party is not working (homemaker/retired).</li>
-        <li>Organize <code class="inline">FL-142</code> support one of two ways (whichever David prefers):
+        <li>Attach beneath <a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl150.pdf" target="_blank" rel="noopener"><code class="inline">FL-150</code></a> in Adobe: <strong>pay stubs</strong> (wage earners) or <strong>profit &amp; loss</strong> (self-employed). Nothing attached if the party is not working (homemaker/retired).</li>
+        <li>Organize <a class="formlink" href="https://courts.ca.gov/system/files?file=2025-07/fl142.pdf" target="_blank" rel="noopener"><code class="inline">FL-142</code></a> support one of two ways (whichever David prefers):
           <ul class="sub">
             <li>Blue interstitial divider pages behind FL-142, labeled by category (e.g. Section 1 Real Estate), with deeds/statements filed behind each; or</li>
             <li>A separate OneDrive subfolder "[Last] [First] PDD Corroborating Documents," with each file renamed to its FL-142 category number.</li>
@@ -347,26 +354,46 @@
         <table>
           <thead><tr><th style="width:120px">Form</th><th>Notes</th></tr></thead>
           <tbody>
-            <tr><td class="form">FL-180</td><td>Judgment (sits on top of the stipulated judgment). If minor children, attach <code class="inline">FL-192</code> behind it — nothing to complete on FL-192.</td></tr>
-            <tr><td class="form">FL-190</td><td>Notice of Entry of Judgment — no signatures; addresses on file with the court.</td></tr>
-            <tr><td class="form">FL-130</td><td>Appearance, Stipulation and Waivers.</td></tr>
-            <tr><td class="form">FL-170</td><td>Declaration for Uncontested Dissolution — complete sections 6 &amp; 7 if there are children.</td></tr>
+            <tr><td class="form"><a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl180.pdf" target="_blank" rel="noopener">FL-180</a></td><td>Judgment (sits on top of the stipulated judgment). If minor children, attach <code class="inline">FL-192</code> behind it — nothing to complete on FL-192.</td></tr>
+            <tr><td class="form"><a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl190.pdf" target="_blank" rel="noopener">FL-190</a></td><td>Notice of Entry of Judgment — no signatures; addresses on file with the court.</td></tr>
+            <tr><td class="form"><a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl130.pdf" target="_blank" rel="noopener">FL-130</a></td><td>Appearance, Stipulation and Waivers.</td></tr>
+            <tr><td class="form"><a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl170.pdf" target="_blank" rel="noopener">FL-170</a></td><td>Declaration for Uncontested Dissolution — complete sections 6 &amp; 7 if there are children.</td></tr>
           </tbody>
         </table>
       </div>
 
       <h3>Usually</h3>
-      <ul class="clean"><li><code class="inline">FL-144</code> — Stipulation and Waiver of Final Declaration of Disclosure (when disclosure is waived).</li></ul>
+      <ul class="clean"><li><a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl144.pdf" target="_blank" rel="noopener"><code class="inline">FL-144</code></a> — Stipulation and Waiver of Final Declaration of Disclosure (when disclosure is waived).</li></ul>
 
       <h3>Sometimes — only on David's instruction</h3>
-      <ul class="clean"><li><code class="inline">FL-195</code> · <code class="inline">FL-435</code> · <code class="inline">FL-455</code> · <code class="inline">FL-191</code>. Add only when David tells you to.</li></ul>
+      <ul class="clean"><li><a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl195.pdf" target="_blank" rel="noopener"><code class="inline">FL-195</code></a> · <a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl435.pdf" target="_blank" rel="noopener"><code class="inline">FL-435</code></a> · <a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl455.pdf" target="_blank" rel="noopener"><code class="inline">FL-455</code></a> · <a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl191.pdf" target="_blank" rel="noopener"><code class="inline">FL-191</code></a>. Add only when David tells you to.</li></ul>
 
-      <div class="call rule"><span class="tag">Rule</span><p>On <code class="inline">FL-180</code>, check the two service boxes — proof of service of summons <em>or</em> notice and acknowledgment of receipt. If a Response (<code class="inline">FL-120</code>) was filed (an appearance), check the appearance box. When more than one date applies, <strong>always use the earlier service date.</strong></p></div>
+      <div class="call rule"><span class="tag">Rule</span><p>On <a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl180.pdf" target="_blank" rel="noopener"><code class="inline">FL-180</code></a>, check the two service boxes — proof of service of summons <em>or</em> notice and acknowledgment of receipt. If a Response (<code class="inline">FL-120</code>) was filed (an appearance), check the appearance box. When more than one date applies, <strong>always use the earlier service date.</strong></p></div>
       <div class="call confirm"><span class="tag">Per matter</span><p>A parentage case (unmarried parents with a child) uses a <strong>different box on FL-130</strong>. Confirm with David per case: name change, spousal support (reserve vs. terminate), attorney's fees, and who signs.</p></div>
     </section>
 
+    <section id="support">
+      <div class="sec-head"><span class="num">9</span><h2 class="sec-title">Spousal or Domestic Partner Support</h2></div>
+      <p>When completing or reviewing the Spousal or Domestic Partner Support section, confirm the selected options are <strong>internally consistent</strong> for each party.</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th style="width:190px">Option</th><th>Select when…</th></tr></thead>
+          <tbody>
+            <tr><td class="form">Support Payable</td><td>The court is ordering spousal or domestic partner support payable to the identified party.</td></tr>
+            <tr><td class="form">Terminate Support</td><td>The court is terminating its jurisdiction to award support to the identified party. Once jurisdiction is terminated, that party generally cannot seek an award of support in the future.</td></tr>
+            <tr><td class="form">Reserve Support</td><td>The court is retaining jurisdiction over support for the identified party, so the issue may be determined at a later date.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="clean">
+        <li><strong>"Support Payable" and "Reserve Support" generally should not both be selected for the same party</strong> — support is either being awarded now, or the issue is being reserved for future determination.</li>
+        <li>It is appropriate for <strong>"Terminate Support"</strong> to be selected for one party while <strong>"Support Payable"</strong> or <strong>"Reserve Support"</strong> is selected for the other (e.g. reserve for her, terminate for him).</li>
+      </ul>
+      <div class="call stop"><span class="tag">Quality check</span><p>If both <strong>"Support Payable"</strong> and <strong>"Reserve Support"</strong> are selected for the <strong>same party</strong>, flag the document for review before proceeding. Do not assume both selections are intentional.</p></div>
+    </section>
+
     <section id="efile">
-      <div class="sec-head"><span class="num">9</span><h2 class="sec-title">E-Filing (Green Filing)</h2></div>
+      <div class="sec-head"><span class="num">10</span><h2 class="sec-title">E-Filing (Green Filing)</h2></div>
       <ol class="steps">
         <li>Confirm the role and select the correct existing case (it should populate).</li>
         <li>Upload the pleading from the client's OneDrive <strong>Pleadings</strong> subfolder.</li>
@@ -379,17 +406,17 @@
     </section>
 
     <section id="comms">
-      <div class="sec-head"><span class="num">10</span><h2 class="sec-title">Client Communication &amp; File Sharing</h2></div>
+      <div class="sec-head"><span class="num">11</span><h2 class="sec-title">Client Communication &amp; File Sharing</h2></div>
       <ul class="clean">
         <li>Email subject convention: <strong>"[Last Name]: [short description]"</strong> so everything is searchable.</li>
-        <li>Disclosure request email: send the blank <code class="inline">FL-150</code> and blank <code class="inline">FL-142</code> (with the firm's standard notes).</li>
+        <li>Disclosure request email: send the blank <a class="formlink" href="https://courts.ca.gov/sites/default/files/courts/default/2024-11/fl150.pdf" target="_blank" rel="noopener"><code class="inline">FL-150</code></a> and blank <a class="formlink" href="https://courts.ca.gov/system/files?file=2025-07/fl142.pdf" target="_blank" rel="noopener"><code class="inline">FL-142</code></a> (with the firm's standard notes).</li>
         <li>Create a disclosure subfolder "[Last].[First] Disclosure Docs" and share the OneDrive link in the email.</li>
         <li>Using a <strong>Share link</strong> (no upload alerts): add "Please let us know when you upload documents." Using <strong>Request Files</strong> (auto-alerts; clients can't see each other's uploads): that sentence isn't needed.</li>
       </ul>
     </section>
 
     <section id="standards">
-      <div class="sec-head"><span class="num">11</span><h2 class="sec-title">Firm-Wide Standards</h2></div>
+      <div class="sec-head"><span class="num">12</span><h2 class="sec-title">Firm-Wide Standards</h2></div>
       <ul class="clean">
         <li><strong>Highlight is your best friend</strong> — mark every fill-in, mistake, oddity, and reconciliation gap so David can review at a glance.</li>
         <li>Never assume David has the context; the paralegal is the first reviewer of the client's work.</li>
@@ -400,7 +427,7 @@
     </section>
 
     <section id="checklist">
-      <div class="sec-head"><span class="num">12</span><h2 class="sec-title">Before-Filing / Sending Checklist</h2></div>
+      <div class="sec-head"><span class="num">13</span><h2 class="sec-title">Before-Filing / Sending Checklist</h2></div>
       <p class="muted">Run through this before anything goes to David or the court. Click to check off — for your own tracking on this page; nothing is saved.</p>
       <div class="checklist">
         <label><input type="checkbox"><span>Attorney role confirmed (record / consulting / mediator) and correct info block used</span></label>
